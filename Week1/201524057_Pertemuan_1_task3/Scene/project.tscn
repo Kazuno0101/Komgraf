@@ -1,0 +1,126 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Script/Control.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Assets/background2.jpg" type="Texture" id=3]
+
+[sub_resource type="StyleBoxTexture" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background2" type="Sprite" parent="."]
+position = Vector2( 513, 320 )
+scale = Vector2( 1.80583, 1.53634 )
+texture = ExtResource( 3 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -140.5
+margin_top = -260.0
+margin_right = 140.5
+margin_bottom = 260.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_titik" type="Button" parent="VBoxContainer"]
+margin_right = 281.0
+margin_bottom = 70.0
+text = "TITIK"
+icon = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSeparator4" type="HSeparator" parent="VBoxContainer"]
+margin_top = 74.0
+margin_right = 281.0
+margin_bottom = 84.0
+custom_constants/separation = 10
+custom_styles/separator = SubResource( 1 )
+
+[node name="btn_vertikal" type="Button" parent="VBoxContainer"]
+margin_top = 88.0
+margin_right = 281.0
+margin_bottom = 158.0
+text = "VERTIKAL"
+icon = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSeparator3" type="HSeparator" parent="VBoxContainer"]
+margin_top = 162.0
+margin_right = 281.0
+margin_bottom = 172.0
+custom_constants/separation = 10
+custom_styles/separator = SubResource( 1 )
+
+[node name="btn_horizontal" type="Button" parent="VBoxContainer"]
+margin_top = 176.0
+margin_right = 281.0
+margin_bottom = 246.0
+text = "HORIZONTAL"
+icon = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+margin_top = 250.0
+margin_right = 281.0
+margin_bottom = 260.0
+custom_constants/separation = 10
+custom_styles/separator = SubResource( 1 )
+
+[node name="btn_kartesian" type="Button" parent="VBoxContainer"]
+margin_top = 264.0
+margin_right = 281.0
+margin_bottom = 334.0
+text = "KARTESIAN"
+icon = ExtResource( 2 )
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+margin_top = 338.0
+margin_right = 281.0
+margin_bottom = 348.0
+custom_constants/separation = 10
+custom_styles/separator = SubResource( 1 )
+
+[node name="btn_smile" type="Button" parent="VBoxContainer"]
+margin_top = 352.0
+margin_right = 281.0
+margin_bottom = 422.0
+text = "SMILE"
+icon = ExtResource( 2 )
+
+[node name="HSeparator5" type="HSeparator" parent="VBoxContainer"]
+margin_top = 426.0
+margin_right = 281.0
+margin_bottom = 446.0
+custom_constants/separation = 20
+custom_styles/separator = SubResource( 1 )
+
+[node name="btn_back" type="Button" parent="VBoxContainer"]
+margin_top = 450.0
+margin_right = 281.0
+margin_bottom = 520.0
+text = "BACK"
+icon = ExtResource( 2 )
+
+[connection signal="pressed" from="VBoxContainer/btn_titik" to="." method="_on_btn_titik_pressed"]
+[connection signal="pressed" from="VBoxContainer/btn_vertikal" to="." method="_on_btn_vertikal_pressed"]
+[connection signal="pressed" from="VBoxContainer/btn_horizontal" to="." method="_on_btn_horizontal_pressed"]
+[connection signal="pressed" from="VBoxContainer/btn_kartesian" to="." method="_on_btn_kartesian_pressed"]
+[connection signal="pressed" from="VBoxContainer/btn_smile" to="." method="_on_btn_smile_pressed"]
+[connection signal="pressed" from="VBoxContainer/btn_back" to="." method="_on_btn_back_pressed"]

@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Script/main.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Assets/background.jpg" type="Texture" id=3]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = -3.0
+margin_right = 4.0
+margin_bottom = -3.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 510, 301 )
+scale = Vector2( 0.2052, 0.176418 )
+texture = ExtResource( 3 )
+
+[node name="Cara" type="Button" parent="."]
+margin_left = 718.0
+margin_top = 412.0
+margin_right = 938.0
+margin_bottom = 498.0
+text = "Cara Menggunakan"
+icon = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Project" type="Button" parent="."]
+margin_left = 713.0
+margin_top = 281.0
+margin_right = 935.0
+margin_bottom = 366.0
+text = "Project"
+icon = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Profile" type="Button" parent="."]
+margin_left = 755.0
+margin_top = 153.0
+margin_right = 931.0
+margin_bottom = 232.0
+text = "Profile"
+icon = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Cara" to="." method="_on_Cara_pressed"]
+[connection signal="pressed" from="Project" to="." method="_on_Project_pressed"]
+[connection signal="pressed" from="Profile" to="." method="_on_Profile_pressed"]
